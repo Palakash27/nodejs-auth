@@ -1,3 +1,3 @@
-var a = 2;
+const a = 5;
 
 module.exports = a;
