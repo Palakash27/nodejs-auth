@@ -1,0 +1,40 @@
+npm i eslint prettier husky lint-staged eslint-config-prettier eslint-plugin-prettier -D
+npx eslint --init
+
+# ? How would you like to use ESLint? To check syntax, find problems, and enforce code style
+# ? What type of modules does your project use? CommonJS (require/exports)
+# ? Which framework does your project use? None of these
+# ? Does your project use TypeScript? No
+# ? Where does your code run? Node
+# ? How would you like to define a style for your project? Use a popular style guide
+# ? Which style guide do you want to follow? Airbnb: https://github.com/airbnb/javascript
+# ? What format do you want your config file to be in? JSON
+
+
+# Put this in extends at last value
+# "plugin:prettier/recommended"
+
+# create .prettierrc file and fill this data
+
+# {
+#  "arrowParens": "avoid",
+#  "printWidth": 80,
+#  "semi": true,
+#  "singleQuote": false,
+#  "tabWidth": 2,
+#  "trailingComma": "all",
+#  "useTabs": false,
+#  "endOfLine": "auto"
+# }
+
+# put this in package.json file
+# "husky": {
+#   "hooks": {
+#     "pre-commit": "lint-staged"
+#   }
+# },
+# "lint-staged": {
+#   "src/**/*.js": [
+#     "npm run lint:fix",
+#   ]
+# }
